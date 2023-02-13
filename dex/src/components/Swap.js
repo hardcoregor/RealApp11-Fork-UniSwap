@@ -8,7 +8,7 @@ import tokenList from '../tokenList.json';
 
 function Swap({ address, isConnected }) {
   const [slippage, setSlippage] = useState(2.5);
-  const [messageApi, setMessageApi] = message.useMessage();
+  const [messageApi, contextHolder] = message.useMessage();
   const [tokenOneAmount, setTokenOneAmount] = useState(null);
   const [tokenTwoAmount, setTokenTwoAmount] = useState(null);
   const [tokenOne, setTokenOne] = useState(tokenList[0]);
