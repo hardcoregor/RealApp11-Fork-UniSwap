@@ -4,10 +4,7 @@ import { Link } from 'react-router-dom';
 import Logo from '../moralis-logo.svg';
 import Eth from '../eth.svg';
 
-const connect = () => {
-}
-
-function Header() {
+function Header({ connect, isConnected, address }) {
   return (
     <header>
       <div className='leftH'>
@@ -25,7 +22,7 @@ function Header() {
           Ethereum
         </div>
         <div className='connectButton' onClick={connect}>
-          Connect
+          {isConnected ? (address.slice(0,4) +"..." +address.slice(38)) : 'Connect'}
         </div>
       </div>
     </header>
